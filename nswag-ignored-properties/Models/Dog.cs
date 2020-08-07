@@ -1,6 +1,3 @@
-using NJsonSchema.Annotations;
-using NSwag.Annotations;
-
 namespace nswag_ignored_properties
 {
     public class Dog : Animal
@@ -15,8 +12,8 @@ namespace nswag_ignored_properties
         /// </summary>
         [Newtonsoft.Json.JsonIgnore]
         [System.Text.Json.Serialization.JsonIgnore]
-        [OpenApiIgnore]
-        [JsonSchemaIgnore]
+        [NSwag.Annotations.OpenApiIgnore]
+        [NJsonSchema.Annotations.JsonSchemaIgnore]
         public override int Foo { get; set; }
     }
 }
